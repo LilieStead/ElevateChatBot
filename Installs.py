@@ -1,6 +1,6 @@
 import subprocess
 import sys
-import re
+import pip
 
 # Validation to ensure each package is installed to Python interpreter
 def pipLookUp(package):
@@ -10,38 +10,46 @@ def pipLookUp(package):
     except subprocess.CalledProcessError:
         return False
 
+# Used to install all the packages
 def installPackages(packageList):
     for package in packageList:
         if not pipLookUp(package):
             print(f"Installing {package}")
             subprocess.check_call([sys.executable, '-m', 'pip', 'install', package])
         else:
+            # Package is already installed
             print(f"{package} is already installed.")
 
+# Gets the latest version of pip
 def pipLatestVersion():
     try:
-        pipInfo = subprocess.check_output([sys.executable, '-m', 'pip', 'search', 'pip']).decode('utf-8')
-        latestVersion = re.search(r'\(([^)]+)\)', pipInfo).group(1)
-        return latestVersion
-    except subprocess.CalledProcessError:
-        return None
-
+        from pip._internal.operations import freeze
+        installed_packages = freeze.freeze()
+        for package in installed_packages:
+            if package.startswith('pip=='):
+                return package.split('==')[1]
+    except Exception as e:
+        print("Error:", e)
+    return None
+# Check if pip is up-to-date
 def pipUpToDate():
     installedVersion = pipLatestVersion()
-    latestVersion = subprocess.check_output([sys.executable, '-m', 'pip', 'show', 'pip']).decode('utf-8')
-    latestVersion = re.search(r'Version: (.+)', latestVersion).group(1)
-    if installedVersion and latestVersion:
+    if installedVersion:
+        latestVersion = pip.__version__
+        print(f"Installed version: {installedVersion}, Latest version: {latestVersion}")
         return installedVersion == latestVersion
     return False
-
 def upgradePip():
     print("Upgrading pip...")
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade', 'pip'])
 
 if __name__ == "__main__":
+    # Update pip if necessary
     if not pipUpToDate():
         upgradePip()
-
+    else:
+        print (f"pip is up-to-date")
+    # All the packages are already installed.
     packagesToInstall = [
         "torch",
         "tensorflow",
