@@ -10,11 +10,13 @@ def pipLookUp(package):
     except subprocess.CalledProcessError:
         return False
 
+
 # Used to install all the packages
 def installPackages(packageList):
     for package in packageList:
         if not pipLookUp(package):
             print(f"Installing {package}")
+            print(f"This may take a few minutes...")
             subprocess.check_call([sys.executable, '-m', 'pip', 'install', package])
         else:
             # Package is already installed
@@ -43,6 +45,23 @@ def upgradePip():
     print("Upgrading pip...")
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', '--upgrade', 'pip'])
 
+# Check if nltk.data packages are already installed and if not install them
+def nltkData():
+    import nltk
+    if not nltk.corpus.stopwords.words('english'):
+        print("Installing nltk stopwords...")
+        print(f"This may take a few minutes...")
+        nltk.download('stopwords')
+    else:
+        print(f"NLTK stopwords are already installed.")
+    if not nltk.tokenize.word_tokenize("test"):
+        print("Installing nltk punkt...")
+        print(f"This may take a few minutes...")
+        nltk.download('punkt')
+    else:
+        print(f"nltk punkt is already installed.")
+    print("nltk data check completed.")
+
 if __name__ == "__main__":
     # Update pip if necessary
     if not pipUpToDate():
@@ -55,7 +74,9 @@ if __name__ == "__main__":
         "tensorflow",
         "flask",
         "flask-cors",
-        "ipykernel"
+        "ipykernel",
+        "nltk"
     ]
-
     installPackages(packagesToInstall)
+    nltkData()
+    print("***All packages installed***")
