@@ -1,0 +1,172 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Greetings",
+        "Good morning"
+      ],
+      "responses": [
+        "Hello! How can I assist you today?",
+        "Hi there! What can I do for you?"
+      ]
+    },
+    {
+      "tag": "farewell",
+      "patterns": [
+        "Goodbye",
+        "Bye",
+        "See you later",
+        "Take care",
+        "Adios"
+      ],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "See you later! Take care!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thank you",
+        "Thanks",
+        "Appreciate it",
+        "Thanks a lot",
+        "Thank you very much"
+      ],
+      "responses": [
+        "You're welcome! Happy to help.",
+        "No problem! Let me know if you need anything else."
+      ]
+    },
+    {
+      "tag": "about",
+      "patterns": [
+        "Tell me about yourself",
+        "What do you do",
+        "Who are you",
+        "What is your purpose",
+        "Explain yourself"
+      ],
+      "responses": [
+        "I am a chatbot designed to assist you with various tasks.",
+        "I am here to help answer your questions and provide assistance."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "Can you help me",
+        "I need assistance",
+        "Help please",
+        "Can you assist me",
+        "I'm stuck, help"
+      ],
+      "responses": [
+        "Of course! What do you need help with?",
+        "Sure thing! What can I assist you with?"
+      ]
+    },
+    {
+      "tag": "weather",
+      "patterns": [
+        "What's the weather like",
+        "How's the weather",
+        "Tell me the forecast",
+        "Is it going to rain",
+        "Weather update"
+      ],
+      "responses": [
+        "The weather is sunny today.",
+        "It's currently raining outside."
+      ]
+    },
+    {
+      "tag": "time",
+      "patterns": [
+        "What time is it",
+        "Can you tell me the time",
+        "What's the current time",
+        "Time please",
+        "Tell me the time"
+      ],
+      "responses": [
+        "It's 10:00 AM.",
+        "The current time is 2:30 PM."
+      ]
+    },
+    {
+      "tag": "restaurant",
+      "patterns": [
+        "Find a restaurant",
+        "I'm hungry",
+        "Recommend a restaurant",
+        "Where can I eat",
+        "Restaurant nearby"
+      ],
+      "responses": [
+        "I recommend trying the Italian restaurant downtown.",
+        "You might enjoy the sushi place on Main Street."
+      ]
+    },
+    {
+      "tag": "music",
+      "patterns": [
+        "Play some music",
+        "I need music",
+        "Recommend some songs",
+        "Music please",
+        "Play my playlist"
+      ],
+      "responses": [
+        "Here's a playlist with some relaxing tunes.",
+        "Enjoy some upbeat music to brighten your day!"
+      ]
+    },
+    {
+      "tag": "joke",
+      "patterns": [
+        "Tell me a joke",
+        "I need a laugh",
+        "Joke please",
+        "Make me laugh",
+        "Share a funny joke"
+      ],
+      "responses": [
+        "Why don't scientists trust atoms? Because they make up everything!",
+        "I told my wife she was drawing her eyebrows too high. She looked surprised!"
+      ]
+    },
+    {
+      "tag": "movie",
+      "patterns": [
+        "Recommend a movie",
+        "What movie should I watch",
+        "Movie suggestion",
+        "Any good movies",
+        "Film recommendation"
+      ],
+      "responses": [
+        "I recommend watching 'The Shawshank Redemption'.",
+        "How about 'Inception'? It's a great movie!"
+      ]
+    },
+    {
+      "tag": "book",
+      "patterns": [
+        "Recommend a book",
+        "What book should I read",
+        "Book suggestion",
+        "Any good books",
+        "Reading recommendation"
+      ],
+      "responses": [
+        "You might enjoy 'To Kill a Mockingbird' by Harper Lee.",
+        "I suggest reading 'The Great Gatsby' by F. Scott Fitzgerald."
+      ]
+    }
+  ]
+}

@@ -10,7 +10,7 @@ def tokenize(sentence):
 def stemming(word):
     return stemmer.stem(word.lower())
 
-def WordBag(tokenizeSentence, allWords):
+def wordBag(tokenizeSentence, allWords):
     tokenizeWords = [stemming(w) for w in tokenizeSentence]
     bag = np.zeros(len(allWords), dtype=np.float32)
     for idx, w in enumerate(allWords):
