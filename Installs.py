@@ -48,19 +48,22 @@ def upgradePip():
 # Check if nltk.data packages are already installed and if not install them
 def nltkData():
     import nltk
-    if not nltk.corpus.stopwords.words('english'):
-        print("Installing nltk stopwords...")
-        print(f"This may take a few minutes...")
-        nltk.download('stopwords')
-    else:
-        print(f"NLTK stopwords are already installed.")
-    if not nltk.tokenize.word_tokenize("test"):
-        print("Installing nltk punkt...")
-        print(f"This may take a few minutes...")
-        nltk.download('punkt')
-    else:
-        print(f"nltk punkt is already installed.")
-    print("nltk data check completed.")
+    nltk.download('stopwords')
+    nltk.download('punkt')
+
+    # if not nltk.corpus.stopwords.words('english'):
+    #     print("Installing nltk stopwords...")
+    #     print(f"This may take a few minutes...")
+    #     nltk.download('stopwords')
+    # else:
+    #     print(f"NLTK stopwords are already installed.")
+    # if not nltk.tokenize.word_tokenize("test"):
+    #     print("Installing nltk punkt...")
+    #     print(f"This may take a few minutes...")
+    #     nltk.download('punkt')
+    # else:
+    #     print(f"nltk punkt is already installed.")
+    # print("nltk data check completed.")
 
 if __name__ == "__main__":
     # Update pip if necessary
