@@ -1,8 +1,5 @@
 
-
-
 def textProcessingModule():
-    print("Please")
     try:
         from textProcessing import wordBag, tokenize, stemming
 

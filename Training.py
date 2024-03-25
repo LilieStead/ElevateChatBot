@@ -1,51 +1,21 @@
 import subprocess
-#Run the installation script to get all packages
-subprocess.run(['python', 'installs.py'])
-
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 import json
+from textProcessing import wordBag, tokenize, stemming
+from model import Network
 
-
-# Function to load textProcessing module with error handling
-def textProcessingModule():
-    try:
-        from textProcessing import wordBag, tokenize, stemming
-        return wordBag, tokenize, stemming
-    except ImportError:
-        print("Error: 'textProcessing.py' could not be found. Please place the file in the project directory.")
-    raise SystemExit(1)
-
-# Function to load model module with error handling
-def loadModelmModule():
-    try:
-        from model import Network
-        return Network
-    except ImportError:
-        print("Error: 'model.py' could not be found. Please place the file in the project directory.")
-        raise SystemExit(1)
+# Run the installation script to get all packages
+subprocess.run(['python', 'installs.py'])
 
 # Open intents file validation
 try:
-    with open('Intents.json', 'r') as f:
+    with open('intents.json', 'r') as f:
         intents = json.load(f)
 except FileNotFoundError:
     print("Error: 'intents.json' could not be found. Please place the file in the project directory.")
-    print("    -Training program has stopped running due to error")
     raise SystemExit(1)
-
-# Load text processing module
-wordBag, tokenize, stemming = textProcessingModule()
-
-# Load model module
-network = loadModelmModule()
-
-# Print status message
-print("Training program is running")
-
-# Define ignored characters
-ignoredLetters = ['?', '.', '!', '+', '-']
 
 # Process intents data
 allWords = []
@@ -56,11 +26,11 @@ for intent in intents['intents']:
     tag = intent['tag']
     tags.append(tag)
     for pattern in intent['patterns']:
-        sentenceWord = tokenize(pattern)
-        allWords.extend(sentenceWord)
-        xy.append((sentenceWord, tag))
+        sentenceWords = tokenize(pattern)
+        allWords.extend(sentenceWords)
+        xy.append((sentenceWords, tag))
 
-allWords = [stemming(sentenceWord) for sentenceWord in allWords if sentenceWord not in ignoredLetters]
+allWords = [stemming(word) for word in allWords if word not in ['?', '.', '!', '+', '-']]
 allWords = sorted(set(allWords))
 tags = sorted(set(tags))
 
@@ -68,21 +38,18 @@ tags = sorted(set(tags))
 x_train = []
 y_train = []
 
-for (sentencePattern, tag) in xy:
-    bag = wordBag(sentencePattern, allWords)
+for (sentenceWords, tag) in xy:
+    bag = wordBag(sentenceWords, allWords)
     x_train.append(bag)
-    label = tag.index(tag)
+    label = tags.index(tag)
     y_train.append(label)
-
-x_train = torch.tensor(x_train)
-y_train = torch.LongTensor(y_train)
 
 # Define Dataset class
 class ChatbotDataset(Dataset):
     def __init__(self):
         self.n_samples = len(x_train)
-        self.x_data = x_train
-        self.y_data = y_train
+        self.x_data = torch.tensor(x_train, dtype=torch.float32)
+        self.y_data = torch.tensor(y_train, dtype=torch.long)
 
     def __getitem__(self, index):
         return self.x_data[index], self.y_data[index]
@@ -100,17 +67,20 @@ numberEpochs = 1000
 
 # Create DataLoader
 dataset = ChatbotDataset()
-trainLoader = DataLoader(dataset=dataset, batch_size=batchSize, shuffle=True, num_workers=0)
+trainLoader = DataLoader(dataset=dataset, batch_size=batchSize, shuffle=True)
 
 # Check for GPU support
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Initialize model
-model = network(inputSize, hiddenSize, outputSize).to(device)
+model = Network(inputSize, hiddenSize, outputSize).to(device)
 
 # Define loss function and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learningRate)
+
+# Print status message
+print("Training program is running")
 
 # Training loop
 for epoch in range(numberEpochs):
@@ -127,9 +97,9 @@ for epoch in range(numberEpochs):
         loss.backward()
         optimizer.step()
 
-        # print losses at each 100 epochs
-        if (epoch + 1) % 100 == 0:
-            print(f"Epoch [{epoch + 1}/{numberEpochs}], Loss: {loss.item():.4f}")
+    # Print losses every 100 epochs
+    if (epoch + 1) % 100 == 0:
+        print(f"Epoch [{epoch + 1}/{numberEpochs}], Loss: {loss.item():.4f}")
 
 print(f'Final loss: {loss.item():.4f}')
 
@@ -142,9 +112,8 @@ data = {
     "all_words": allWords,
     "tags": tags,
 }
-# data file validation
+
 try:
-    # try save data
     FILE = "data.pth"
     torch.save(data, FILE)
     print(f"Training complete, model saved to '{FILE}'")
