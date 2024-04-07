@@ -6,8 +6,8 @@
         "Hi",
         "Hello",
         "Hey",
-        "Greetings",
-        "Good morning"
+        "Good morning",
+        "Greetings"
       ],
       "responses": [
         "Hello! How can I assist you today?",
@@ -52,8 +52,8 @@
         "Explain yourself"
       ],
       "responses": [
-        "I am a chatbot designed to assist you with various tasks.",
-        "I am here to help answer your questions and provide assistance."
+        "I'm a chatbot designed to assist you with various tasks.",
+        "I'm here to help answer your questions and provide assistance."
       ]
     },
     {
@@ -63,7 +63,7 @@
         "I need assistance",
         "Help please",
         "Can you assist me",
-        "I'm stuck, help"
+        "I'm stuck"
       ],
       "responses": [
         "Of course! What do you need help with?",
@@ -73,10 +73,9 @@
     {
       "tag": "weather",
       "patterns": [
-        "What's the weather like",
+        "What's the weather",
         "How's the weather",
-        "Tell me the forecast",
-        "Is it going to rain",
+        "forecast",
         "Weather update"
       ],
       "responses": [
@@ -90,7 +89,7 @@
         "What time is it",
         "Can you tell me the time",
         "What's the current time",
-        "Time please",
+        "Time",
         "Tell me the time"
       ],
       "responses": [
@@ -116,10 +115,9 @@
       "tag": "music",
       "patterns": [
         "Play some music",
-        "I need music",
         "Recommend some songs",
-        "Music please",
-        "Play my playlist"
+        "Recommend a song",
+        "Music"
       ],
       "responses": [
         "Here's a playlist with some relaxing tunes.",
@@ -130,10 +128,9 @@
       "tag": "joke",
       "patterns": [
         "Tell me a joke",
-        "I need a laugh",
-        "Joke please",
         "Make me laugh",
-        "Share a funny joke"
+        "Joke",
+        "A funny joke"
       ],
       "responses": [
         "Why don't scientists trust atoms? Because they make up everything!",
@@ -146,7 +143,7 @@
         "Recommend a movie",
         "What movie should I watch",
         "Movie suggestion",
-        "Any good movies",
+        "Good Movies",
         "Film recommendation"
       ],
       "responses": [
@@ -160,7 +157,7 @@
         "Recommend a book",
         "What book should I read",
         "Book suggestion",
-        "Any good books",
+        "Good Books",
         "Reading recommendation"
       ],
       "responses": [

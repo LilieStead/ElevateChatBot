@@ -85,6 +85,7 @@ def getResponse(msg):
     _, predicted = torch.max(output, dim=1)
 
     tag = tags[predicted.item()]
+    print(tag)
 
     prob = torch.softmax(output, dim=1)
     prob = prob[0][predicted.item()]
