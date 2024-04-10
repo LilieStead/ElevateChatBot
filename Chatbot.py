@@ -1,5 +1,5 @@
 import subprocess
-#Run the installation script to get all packages
+
 subprocess.run(['python', 'installs.py'])
 
 #Look to see if text proccessing files and mof
