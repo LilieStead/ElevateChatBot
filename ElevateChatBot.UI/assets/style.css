@@ -49,6 +49,10 @@
     font-family: fontri;
     src: url(fnt/LEMONMILK-RegularItalic.otf);
 }
+@font-face {
+    font-family: chatfontr;
+    src: url(fnt/LTSaeada-Regular.otf);
+}
 
 header{
     height: 12vh;
@@ -66,7 +70,7 @@ header{
         text-transform: uppercase;
         text-align: left;
         padding: 10px 10px 10px 50px;
-        height: 6rem;
+        height: 14vh;
         
     
 }
@@ -116,6 +120,7 @@ header{
 
 body{
     background-color: #EBF2FA;
+    overflow-y: hidden;
 }
 
 #chat, #inputspace{
@@ -161,6 +166,124 @@ body{
     font-family: fontl;
     color: #fff;
     margin-top: 1rem;
-    
-    
 }
+
+.messages{
+    min-width: 100%;
+}
+.messagescontent{
+    max-height: 100%;
+    overflow: auto;
+}
+
+.messagescontent .message{
+    clear: both;
+    float: left;
+    padding: 6px 10px 7px;
+    border-radius: 10px 10px 10px 0;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-left: 35px;
+    position: relative;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+   
+}
+.messagescontent .message p{
+    font-family: chatfontr;
+    font-size: 1.1rem;
+}
+
+.messagescontent .message-personal{
+    float: right !important;
+    color: #fff;
+    text-align: right;
+    background: -webkit-linear-gradient(330deg, #02C39A, #028090) !important;
+    background: linear-gradient(120deg, #02C39A, #028090) !important;
+    border-radius: 10px 10px 0 10px !important;
+    margin: 8px 35px 8px 0 !important;
+}
+
+.messages .message {
+    clear: both;
+    float: left;
+    padding: 6px 10px 7px;
+    border-radius: 10px 10px 10px 0;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-left: 35px;
+    position: relative;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+
+input[disabled] {
+    background-color: #f2f2f2; /* Background color */
+    color: #999; /* Text color */
+    cursor: not-allowed; /* Cursor style */
+    /* You can add more styles as needed */
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #EBF2FA; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #2C2F33; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1e1f22; 
+  }
+
+  .time{
+    font-family: fontli;
+    font-size: 0.6rem;
+  }
+
+  @media screen and (max-width: 430px) {
+    #chatheader h1{
+        font-size: 2rem;
+        margin-left: 3.3rem;
+    }
+    #chatheader h2{
+        font-size: 0.7rem;
+        margin-left: 3.3rem;
+    }
+    #chatheader .chaticon{
+        width: 5rem;
+        height: 5rem;
+        top: 1rem;
+        left: 1rem;
+        
+    }
+    #chatheader .chaticon .fa-comments{
+        font-size: 3.3rem;
+  }
+
+  @media screen and (max-width: 375px) {
+    #chatheader h1{
+        font-size: 1.5rem;
+    }
+    #chatheader h2{
+        font-size: 0.65rem;
+        letter-spacing: 0.3rem;
+    }#inputspace form #question{
+        width: 13rem;
+    }.messages .message{
+        margin-left: 10px
+    }.messagescontent .message-personal{
+        margin: 8px 10px 8px 0 !important;
+    }
+
+    }
+  }

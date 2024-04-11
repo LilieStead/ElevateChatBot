@@ -13,17 +13,24 @@
 </header>
 <body>
     <div id="chat">
-
+        <div class="messages">
+            <div class="messagescontent" id="storemsg"></div>
+        </div>
+        
     </div>
     <div id="inputspace">
-        <form action="" >
+        <form action="" id="sendmsgform">
             <div class="centercontents">
-                <input type="text" name="question" id="question" >
+                <input type="text" name="question" id="question"  >
             </div>
             <div class="centercontents">
-                <input type="submit" >
+                <input type="submit" id="sendbtn" >
             </div>
         </form>
 
     </div>
 </body>
+
+<script src="assets/js/fetchchatstatus.js"></script>
+<script src="assets/js/fetchmsg.js"></script>
+</script>
