@@ -1,7 +1,10 @@
 function usermsg (msg){
     var chatBox = document.getElementById('storemsg');
     var currenttime = new Date().toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' });
-    console.log(currenttime)
+    var userMsg = { message: msg, time: currenttime };
+    var userMsgs = JSON.parse(localStorage.getItem('usermsgs')) || [];
+    userMsgs.push(userMsg);
+    localStorage.setItem('usermsgs', JSON.stringify(userMsgs));
     chatBox.innerHTML += '<div class="message message-personal"><p>' + msg + '</p> <span class="time">'+ currenttime +'</span></div>';
 
 }
@@ -9,7 +12,10 @@ function usermsg (msg){
 function botmsg (data){
     var chatBox = document.getElementById('storemsg');
     var currenttime = new Date().toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' });
-    console.log(currenttime)
+    var botMsg = {message: data, time: currenttime };
+    var botMsgs = JSON.parse(localStorage.getItem('botmsgs')) || [];
+    botMsgs.push(botMsg);
+    localStorage.setItem('botmsgs', JSON.stringify(botMsgs))
     chatBox.innerHTML += '<div class="message"><p>' + data.answer + '</p><span class="time">'+ currenttime +'</span></div>';
 }
 
@@ -21,7 +27,6 @@ function sendmsg(event){
     if (!message){ // Check if message is empty
         return;
     } else {
-        usermsg(message);
         try {
             fetch("http://127.0.0.1:5000/prediction", {
                 method: 'POST',
@@ -35,6 +40,7 @@ function sendmsg(event){
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
+                usermsg(message);
                 return response.json();
             })
             .then(data => {

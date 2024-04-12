@@ -98,9 +98,9 @@ header{
 #chatheader .chaticon{
     position: absolute;
     z-index: 1;
-    top: 0.8rem;
-    left: 0.8rem;
-    border-radius: 6rem;
+    top: 1.8rem;
+    left: 1.2rem;
+    border-radius: 2rem;
     width: 7rem;
     height: 7rem;
     overflow: hidden;
