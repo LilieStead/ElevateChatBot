@@ -7,9 +7,14 @@ function botmsgerror (){
 }
 
 function chatstatus(){
+    
     fetch("http://127.0.0.1:5000/status")
         .then(response => {
             if (response.ok) {
+                if (!checkCookie('chatcookie')) {
+                    // If the cookie doesn't exist, create it with an expiration time of 10 minutes
+                    createCookie('chatcookie', 'Chatcookie', 10); // 10 minutes expiration
+}
                 return response.text();
             }
             throw new Error("Network response was not ok")
