@@ -9,28 +9,31 @@ function botmsgerror (){
 function chatstatus(){
     
     fetch("http://127.0.0.1:5000/status")
-        .then(response => {
-            if (response.ok) {
-                if (!checkCookie('chatcookie')) {
-                    // If the cookie doesn't exist, create it with an expiration time of 10 minutes
-                    createCookie('chatcookie', 'Chatcookie', 10); // 10 minutes expiration
-}
-                return response.text();
+    .then(response => {
+        if (response.ok) {
+            if (!checkCookie('chatcookie')) {
+                localStorage.removeItem("usermsgs");
+                localStorage.removeItem("botmsgs");
+                createCookie('chatcookie', 'Chatcookie', 10);
             }
-            throw new Error("Network response was not ok")
-        })
-        .then(data => {
-            console.log(data)
-        })
-        .catch(error => {
-            botmsgerror();
-            console.error('There was a problem with your fetch operation:', error);
-            const inputbox = document.getElementById("question");
-            const sendbtn = document.getElementById("sendbtn");
-            inputbox.disabled = true;
-            sendbtn.disabled = true;
-            
-        })
+            else{
+                laodmsgs()
+            }
+            return response.text();
+        }
+        throw new Error("Network response was not ok");
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        botmsgerror();
+        console.error('There was a problem with your fetch operation:', error);
+        const inputbox = document.getElementById("question");
+        const sendbtn = document.getElementById("sendbtn");
+        inputbox.disabled = true;
+        sendbtn.disabled = true;
+    });
 }
 
 window.onload = chatstatus();

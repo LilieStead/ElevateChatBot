@@ -129,6 +129,7 @@ body{
 
 #chat{
     height: 71vh;
+    margin-top: 1.5rem;
 }
 
 #inputspace{

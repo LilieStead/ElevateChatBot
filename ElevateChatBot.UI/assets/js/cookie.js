@@ -24,8 +24,20 @@ function createCookie(chatcookie, cookieValue, minutesToExpire) {
     document.cookie = chatcookie + "=" + cookieValue + ";" + expires + ";path=/";
 }
 
-// Check if the cookie exists
-if (!checkCookie('chatcookie')) {
-    // If the cookie doesn't exist, create it with an expiration time of 10 minutes
-    createCookie('chatcookie', 'Chatcookie', 10); // 10 minutes expiration
+
+
+function laodmsgs() {
+    const loaduser = JSON.parse(localStorage.getItem("usermsgs")) || [];
+    const loadbot = JSON.parse(localStorage.getItem("botmsgs")) || [];
+
+    const loadmsgs = [];
+    for (let i = 0; i < Math.max(loaduser.length, loadbot.length); i++) {
+        if (loaduser[i]) loadmsgs.push({ message: loaduser[i].message, type: 'message message-personal', timestamp: loaduser[i].time });
+        if (loadbot[i]) loadmsgs.push({ message: loadbot[i].message, type: 'message', timestamp: loadbot[i].time });
+    }
+
+    const chatBox = document.getElementById('storemsg');
+    chatBox.innerHTML = loadmsgs.map(msg => {
+        return `<div class="${msg.type}"><p>${msg.message}</p><span class="time">${msg.timestamp}</span></div>`;
+    }).join("");
 }

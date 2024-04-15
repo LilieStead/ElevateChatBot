@@ -1,22 +1,23 @@
-function usermsg (msg){
+function usermsg(msg) {
     var chatBox = document.getElementById('storemsg');
     var currenttime = new Date().toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' });
-    var userMsg = { message: msg, time: currenttime };
+    var userMsg = { message: msg, time: currenttime }; // Store message and time in an object
     var userMsgs = JSON.parse(localStorage.getItem('usermsgs')) || [];
     userMsgs.push(userMsg);
     localStorage.setItem('usermsgs', JSON.stringify(userMsgs));
+    // Update chatBox with the new message
     chatBox.innerHTML += '<div class="message message-personal"><p>' + msg + '</p> <span class="time">'+ currenttime +'</span></div>';
-
 }
 
-function botmsg (data){
+function botmsg(msg) {
     var chatBox = document.getElementById('storemsg');
     var currenttime = new Date().toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' });
-    var botMsg = {message: data, time: currenttime };
+    var botMsg = { message: msg, time: currenttime }; // Store message and time in an object
     var botMsgs = JSON.parse(localStorage.getItem('botmsgs')) || [];
     botMsgs.push(botMsg);
     localStorage.setItem('botmsgs', JSON.stringify(botMsgs))
-    chatBox.innerHTML += '<div class="message"><p>' + data.answer + '</p><span class="time">'+ currenttime +'</span></div>';
+    // Update chatBox with the new message
+    chatBox.innerHTML += '<div class="message"><p>' + msg + '</p><span class="time">'+ currenttime +'</span></div>';
 }
 
 
@@ -47,7 +48,7 @@ function sendmsg(event){
                 // Handle response data here
                 console.log(data)
                 document.getElementById("question").value = "";
-                botmsg(data);
+                botmsg(data.answer);
             })
             .catch(error => {
                 console.error('Error sending message:', error);
