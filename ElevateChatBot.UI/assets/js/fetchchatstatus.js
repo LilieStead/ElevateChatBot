@@ -17,7 +17,7 @@ function chatstatus(){
                 createCookie('chatcookie', 'Chatcookie', 10);
             }
             else{
-                laodmsgs()
+                loadmsgs()
             }
             return response.text();
         }

@@ -26,7 +26,7 @@ function createCookie(chatcookie, cookieValue, minutesToExpire) {
 
 
 
-function laodmsgs() {
+function loadmsgs() {
     const loaduser = JSON.parse(localStorage.getItem("usermsgs")) || [];
     const loadbot = JSON.parse(localStorage.getItem("botmsgs")) || [];
 
