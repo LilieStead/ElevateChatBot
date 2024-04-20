@@ -1,0 +1,298 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flexcontainer{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* centers items held within a div  */
+.centercontents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* fonts - lemon milk */
+@font-face {
+    font-family: fontb;
+    src: url(fnt/LEMONMILK-Bold.otf);
+}
+@font-face{
+    font-family: fontbi;
+    src: url(fnt/LEMONMILK-BoldItalic.otf);
+}
+@font-face {
+    font-family: fontl;
+    src: url(fnt/LEMONMILK-Light.otf);
+}
+@font-face {
+    font-family: fontli;
+    src: url(fnt/LEMONMILK-LightItalic.otf);
+}
+@font-face {
+    font-family: fontm;
+    src: url(fnt/LEMONMILK-Medium.otf);
+}
+@font-face {
+    font-family: fontmi;
+    src: url(fnt/LEMONMILK-MediumItalic.otf);
+}
+@font-face {
+    font-family: fontr;
+    src: url(fnt/LEMONMILK-Regular.otf);
+}
+@font-face {
+    font-family: fontri;
+    src: url(fnt/LEMONMILK-RegularItalic.otf);
+}
+@font-face {
+    font-family: chatfontr;
+    src: url(fnt/LTSaeada-Regular.otf);
+}
+
+#chatheader{
+    /* -webkit-box-flex: 0; */
+    /* -ms-flex: 0 1 45px;
+        flex: 0 1 45px; */
+        position: relative;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+        background-color: #028090;
+        text-transform: uppercase;
+        text-align: left;
+        padding: 10px 10px 10px 50px;
+        height: 12vh;
+}
+
+
+
+#chatheader h1, #chatheader h2{
+    font-weight: normal;
+    font-size: 3rem;
+    margin-left: 6.2rem;
+
+}
+
+#chatheader h2{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    letter-spacing: 0.5rem;
+    padding-left: 1.2rem;
+    font-family: fontli;
+}
+
+#chatheader h1{
+    font-family: fontb;
+    border: #2c2f33;
+}
+
+#chatheader .chaticon{
+    position: absolute;
+    z-index: 1;
+    top: 1.8rem;
+    left: 1.2rem;
+    border-radius: 2rem;
+    width: 7rem;
+    height: 7rem;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 2px solid #09526e;
+    box-shadow: 11px 5px 19px 4px #2c2f33;
+    align-content: space-around;
+    background-color: #05668D;
+}
+
+#chatheader .chaticon .fa-comments{
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background-color: #EBF2FA;
+    overflow-y: hidden;
+}
+.chatspace{
+    height: 2rem;
+    background-color: #ffffff00;
+}
+
+#chat, #inputspace{
+    width: 100vw;
+}
+
+#chat{
+    height: 71vh;
+}
+
+#inputspace{
+    height: 17vh;
+    background-color: #2c2f33;
+}
+
+#inputspace form #question{
+    border:1px solid #ccc;
+  outline:none;
+  width:40rem;
+  height:2rem;
+  border-radius:33px;
+  margin:0 auto;
+  color:#151515;
+  font-size:19px;
+  color: #2c2f33;
+  font-family: sans-serif;
+}
+
+#inputspace form #question:focus{
+    box-shadow: 0 0 8px #028090;
+}
+
+#inputspace form{
+    padding: 1.5rem;
+    
+}
+#inputspace form input[type="submit"]{
+    border-radius:33px;
+    background-color: #028090;
+    border: none;
+    width: 8rem;
+    height: 2rem;
+    font-family: fontl;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.messages{
+    min-width: 100%;
+}
+.messagescontent{
+    max-height: 100%;
+    overflow: auto;
+}
+
+.messagescontent .message{
+    clear: both;
+    float: left;
+    padding: 6px 10px 7px;
+    border-radius: 10px 10px 10px 0;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-left: 35px;
+    position: relative;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+   
+}
+.messagescontent .message p{
+    font-family: chatfontr;
+    font-size: 1.1rem;
+}
+
+.messagescontent .message-personal{
+    float: right !important;
+    color: #fff;
+    text-align: right;
+    background: -webkit-linear-gradient(330deg, #02C39A, #028090) !important;
+    background: linear-gradient(120deg, #02C39A, #028090) !important;
+    border-radius: 10px 10px 0 10px !important;
+    margin: 8px 35px 8px 0 !important;
+}
+
+.messages .message {
+    clear: both;
+    float: left;
+    padding: 6px 10px 7px;
+    border-radius: 10px 10px 10px 0;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-left: 35px;
+    position: relative;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+
+input[disabled] {
+    background-color: #f2f2f2; /* Background color */
+    color: #999; /* Text color */
+    cursor: not-allowed; /* Cursor style */
+    /* You can add more styles as needed */
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #EBF2FA; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #2C2F33; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1e1f22; 
+  }
+
+  .time{
+    font-family: fontli;
+    font-size: 0.6rem;
+  }
+
+  @media screen and (max-width: 430px) {
+    #chatheader h1 {
+        font-size: 2rem;
+        margin-left: 3.3rem;
+    }
+    #chatheader h2 {
+        font-size: 0.7rem;
+        margin-left: 3.3rem;
+    }
+    #chatheader .chaticon {
+        width: 5rem;
+        height: 5rem;
+        top: 1rem;
+        left: 1rem;
+    }
+    #chatheader .chaticon .fa-comments {
+        font-size: 3.3rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #chatheader h1 {
+        font-size: 3rem;
+        margin-left: 4.2rem;
+    }
+    #chatheader h2 {
+        font-size: 1.2rem;
+        letter-spacing: 0.3rem;
+        margin-left: 4.2rem;
+    }
+    #inputspace form #question {
+        width: 13rem;
+    }
+    .messages .message {
+        margin-left: 10px;
+    }
+    .messagescontent .message-personal {
+        margin: 8px 10px 8px 0 !important;
+    }
+    #chatheader .chaticon{
+        width: 5.2rem;
+        height: 5.2rem;
+        top: 1.3rem;
+        left: 1.3rem;
+    }
+}
