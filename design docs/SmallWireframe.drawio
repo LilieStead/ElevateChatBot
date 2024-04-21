@@ -1,0 +1,256 @@
+<mxfile host="app.diagrams.net" modified="2024-04-05T22:53:24.343Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="YVfx5DuAbr3zw0PxWtNH" version="24.2.1" type="device">
+  <diagram name="Page-1" id="SvyHYkW_uooYtNIsQO3e">
+    <mxGraphModel dx="2899" dy="2154" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vd0RSFljoD592YIlHhGm-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="170" width="280" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="170" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="180" y="130" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-4" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.user;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="210" y="160" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-5" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;Elevate&amp;nbsp;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="192.5" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-6" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;x&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="460" y="170" width="30" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-11" value="" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="230" y="300" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-13" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Elevate&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="236" y="274" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-14" value="Some response form the chat bot" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="236" y="315" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-15" value="" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="280" y="390" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-16" value="Some question form the user" style="text;html=1;align=right;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="315" y="405" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-17" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;You&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="364" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-18" value="" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="220" y="476" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-19" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Elevate&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="226" y="450" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-20" value="Some response form the chat bot" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="226" y="491" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-21" value="" style="html=1;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;shadow=0;dashed=0;strokeWidth=2;shape=mxgraph.ios7.misc.scroll_(horizontal);fillColor=#bac8d3;rotation=90;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="325" y="415" width="310" height="6" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-24" value="" style="endArrow=none;html=1;rounded=0;exitX=0.006;exitY=0.808;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="vd0RSFljoD592YIlHhGm-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="580" as="sourcePoint" />
+            <mxPoint x="490" y="574" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-25" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="226" y="590" width="244" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-26" value="SEND" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="307.5" y="620" width="85" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-28" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry y="130" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-29" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.user;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="160" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-30" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="41" width="560" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-31" value="&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 40px;&quot;&gt;PAGE CONTENT&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="660" y="111" width="400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-57" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="165" width="150" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-58" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="165" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-59" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="950" y="145" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-60" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.user;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="967.5" y="162.5" width="35" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-61" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Elevate&amp;nbsp;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="170" width="100" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-62" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;x&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="165" width="30" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-63" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="407" width="560" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-64" value="&lt;font color=&quot;#ff0000&quot; style=&quot;font-size: 40px;&quot;&gt;PAGE CONTENT&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="660" y="477" width="400" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-67" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="630" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-68" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.user;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="1067.5" y="647.5" width="35" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="59.470588235294144" y="128.47058823529414" as="targetPoint" />
+            <mxPoint x="59" y="80" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-72" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Button to open chatbot&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-5" y="41" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="vd0RSFljoD592YIlHhGm-75">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="33.58823529411757" y="192" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-85" y="192" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-75" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Chatbot icon&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-150" y="100" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="479.47058823529414" y="175.52941176470586" as="targetPoint" />
+            <mxPoint x="480" y="120" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-78" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;button to close the chatbot&amp;nbsp;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="415" y="81" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="vd0RSFljoD592YIlHhGm-82">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="155.83333333333337" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-82" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Chatbot icon&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="81" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="vd0RSFljoD592YIlHhGm-84">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="357.5" y="231.66666666666674" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="125" y="272" />
+              <mxPoint x="358" y="272" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-84" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Chatbots name&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="285" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="vd0RSFljoD592YIlHhGm-86">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="485" y="552.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-86" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Scroll bar to view past messages&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="420" y="687" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="vd0RSFljoD592YIlHhGm-88">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-88" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Input for users questions&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="585" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="vd0RSFljoD592YIlHhGm-90">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220.19047619047615" y="504.6190476190475" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-90" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Chatbots messages&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="490" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="vd0RSFljoD592YIlHhGm-92">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="297.33333333333303" y="417.95238095238096" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-92" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Users messages, users messages will be purple&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="403" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="vd0RSFljoD592YIlHhGm-94">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="352.5" y="646.6666666666667" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-94" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Send button so user can send message&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="185" y="717" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="vd0RSFljoD592YIlHhGm-96">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230.66666666666652" y="344.6190476190475" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-96" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Chatbots messages will be gray&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="330" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="vd0RSFljoD592YIlHhGm-99">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1106" y="249.33333333333326" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-99" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Chat bot when it is open.&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="235" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="vd0RSFljoD592YIlHhGm-101">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1122" y="668" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-101" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Chat bot when it is closed.&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="652.5" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1082" y="617.3333333333333" as="targetPoint" />
+            <mxPoint x="1263" y="451" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1265" y="539" />
+              <mxPoint x="1083" y="539" />
+              <mxPoint x="1083" y="617" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1" source="vd0RSFljoD592YIlHhGm-103">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1083.3333333333335" y="345.33333333333326" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-103" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Possible box shadow over content.&amp;nbsp;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="405" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="375" y="173" as="targetPoint" />
+            <mxPoint x="375" y="63" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-107" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Purple header of chatbot&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="30" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vd0RSFljoD592YIlHhGm-109" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Small chatbot using jQuery&amp;nbsp;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="400" y="-50" width="280" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
