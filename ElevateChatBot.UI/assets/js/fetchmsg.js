@@ -23,7 +23,6 @@ function botmsg(msg) {
 
 function sendmsg(event){
     event.preventDefault();
-    console.log("dshjash")
     var message = document.getElementById("question").value; // Retrieve the value of the input field
     if (!message){ // Check if message is empty
         return;

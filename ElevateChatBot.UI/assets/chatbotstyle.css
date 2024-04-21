@@ -185,6 +185,7 @@ body{
     margin-left: 35px;
     position: relative;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    max-width: 70%;
    
 }
 .messagescontent .message p{
@@ -205,6 +206,11 @@ body{
 .messages .message:first-of-type{
     margin-top: 2rem !important;
 }
+
+.messages .message:last-of-type{
+    margin-top: 1rem !important;
+}
+
 
 .messages .message {
     clear: both;
@@ -227,24 +233,23 @@ input[disabled] {
     /* You can add more styles as needed */
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #EBF2FA; 
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #2C2F33; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #1e1f22; 
-  }
+/* Define scrollbar track */
+#chat::-webkit-scrollbar {
+    width: 10px; /* Adjust as needed */
+}
+
+/* Define scrollbar thumb */
+#chat::-webkit-scrollbar-thumb {
+    background-color: #666; /* Adjust as needed */
+    border-radius: 10px; /* Adjust as needed */
+}
+
+/* Define scrollbar track */
+#chat::-webkit-scrollbar-track {
+    background-color: #ddd; /* Adjust as needed */
+    border-radius: 10px; /* Adjust as needed */
+}
+
 
   .time{
     font-family: fontli;
