@@ -61,7 +61,6 @@
     right: 0;
     height: 25rem;
     margin-right: 5rem;
-    border-radius: 2.5px;
     width: 18rem;
     z-index: 10;
 
@@ -71,6 +70,8 @@
     background-color: #028090;
     padding: 0.2rem;
     height: 15%;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
     
 }
 
@@ -88,6 +89,7 @@
 #inputspace{
     background-color: #2C2F33;
     height: 20%;
+    padding-bottom: 6rem;
 }
 
 #inputspace form #question{
@@ -101,6 +103,19 @@
   font-size:19px;
   color: #2c2f33;
   font-family: sans-serif;
+  margin-top: 0.5rem;
 }
+
+#inputspace form input[type="submit"]{
+    border-radius:33px;
+    background-color: #028090;
+    border: none;
+    width: 8rem;
+    height: 2rem;
+    font-family: fontl;
+    color: #fff;
+    margin-top: 1rem;
+}
+
 
 /* END CHATBOT STYLES */

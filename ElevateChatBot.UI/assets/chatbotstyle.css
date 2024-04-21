@@ -66,7 +66,7 @@
         text-transform: uppercase;
         text-align: left;
         padding: 10px 10px 10px 50px;
-        height: 12vh;
+        height: 14vh;
 }
 
 
@@ -118,17 +118,14 @@ body{
     background-color: #EBF2FA;
     overflow-y: hidden;
 }
-.chatspace{
-    height: 2rem;
-    background-color: #ffffff00;
-}
 
 #chat, #inputspace{
     width: 100vw;
 }
 
 #chat{
-    height: 71vh;
+    height: 70vh;
+    overflow-x: auto;
 }
 
 #inputspace{
@@ -205,6 +202,10 @@ body{
     margin: 8px 35px 8px 0 !important;
 }
 
+.messages .message:first-of-type{
+    margin-top: 2rem !important;
+}
+
 .messages .message {
     clear: both;
     float: left;
@@ -272,11 +273,11 @@ input[disabled] {
 
 @media screen and (max-width: 375px) {
     #chatheader h1 {
-        font-size: 3rem;
+        font-size: 2.6rem;
         margin-left: 4.2rem;
     }
     #chatheader h2 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         letter-spacing: 0.3rem;
         margin-left: 4.2rem;
     }
