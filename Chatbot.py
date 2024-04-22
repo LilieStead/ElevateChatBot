@@ -27,6 +27,7 @@ import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 import json
 import torch.cuda
+from autocorrect import Speller
 
 # Function to load textProcessing module with error handling
 
@@ -74,9 +75,21 @@ module.eval()
 name = "Elevate"
 print(f"*********{name} Chatbot has successfully deployed*********")
 
+spellChecker = Speller()
+
+def spellCheck(sentence):
+    # Tokenize the sentence
+    tokens = tokenizeFunction(sentence)
+    # Spell check and replace each token
+    corrected = [spellChecker(token) for token in tokens]
+    # Join the corrected tokens back into a sentence
+    return " ".join(corrected)
+
 
 def getResponse(msg):
-    sentence = tokenizeFunction(msg)
+    sentence = spellCheck(msg)
+    # Tokenize the sentence again to word bag
+    sentence = tokenizeFunction(sentence)
     x = wordBagFunction(sentence, allWords)
     x = x.reshape(1, x.shape[0])
     x = torch.from_numpy(x)
@@ -95,6 +108,8 @@ def getResponse(msg):
                 print(f"{tag} & {intent}")
     else:
         return random.choice(fallbackResponses)
+
+
 
 if __name__ == "__main__":
     print(f"Ready to chat!")

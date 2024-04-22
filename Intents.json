@@ -43,27 +43,13 @@
       ]
     },
     {
-      "tag": "about",
-      "patterns": [
-        "Tell me about yourself",
-        "What do you do",
-        "Who are you",
-        "What is your purpose",
-        "Explain yourself"
-      ],
-      "responses": [
-        "I'm a chatbot designed to assist you with various tasks.",
-        "I'm here to help answer your questions and provide assistance."
-      ]
-    },
-    {
       "tag": "help",
       "patterns": [
-        "Can you help me",
-        "I need assistance",
-        "Help please",
-        "Can you assist me",
-        "I'm stuck"
+        "Help",
+        "Assistance",
+        "Need help",
+        "I'm stuck",
+        "Can you help"
       ],
       "responses": [
         "Of course! What do you need help with?",
@@ -71,98 +57,130 @@
       ]
     },
     {
-      "tag": "weather",
+      "tag": "programs",
       "patterns": [
-        "What's the weather",
-        "How's the weather",
-        "forecast",
-        "Weather update"
+        "What programs does Hull offer",
+        "What degrees can I study at Hull",
+        "List of courses at Hull",
+        "Majors at Hull",
+        "Study options at Hull"
       ],
       "responses": [
-        "The weather is sunny today.",
-        "It's currently raining outside."
+        "Hull College offers a variety of programs including Business Administration, Computer Science, Nursing, and more.",
+        "Some of the programs available at Hull College are Accounting, Graphic Design, Education, and Psychology."
       ]
     },
     {
-      "tag": "time",
+      "tag": "admission",
       "patterns": [
-        "What time is it",
-        "Can you tell me the time",
-        "What's the current time",
-        "Time",
-        "Tell me the time"
+        "Apply",
+        "Admissions",
+        "Enroll",
+        "Application process",
+        "Admission requirements"
       ],
       "responses": [
-        "It's 10:00 AM.",
-        "The current time is 2:30 PM."
+        "To apply to Hull College, visit our website and fill out the online application form.",
+        "The admissions process at Hull College is straightforward. You can apply online or contact our admissions office for assistance."
       ]
     },
     {
-      "tag": "restaurant",
+      "tag": "scholarships",
       "patterns": [
-        "Find a restaurant",
-        "I'm hungry",
-        "Recommend a restaurant",
-        "Where can I eat",
-        "Restaurant nearby"
+        "Scholarships",
+        "Financial aid",
+        "Grants",
+        "Tuition assistance",
+        "Funding options"
       ],
       "responses": [
-        "I recommend trying the Italian restaurant downtown.",
-        "You might enjoy the sushi place on Main Street."
+        "Yes, Hull College offers various scholarships and financial aid options to eligible students. Check our website for more information.",
+        "There are several scholarship opportunities available at Hull College. Contact our financial aid office to learn more about your options."
       ]
     },
     {
-      "tag": "music",
+      "tag": "campus_life",
       "patterns": [
-        "Play some music",
-        "Recommend some songs",
-        "Recommend a song",
-        "Music"
+        "Campus life at Hull",
+        "Student activities",
+        "Clubs and organizations",
+        "Events on campus",
+        "Extracurricular opportunities",
+        "offer any activities"
       ],
       "responses": [
-        "Here's a playlist with some relaxing tunes.",
-        "Enjoy some upbeat music to brighten your day!"
+        "Campus life at Hull College is vibrant and diverse, with numerous student clubs, organizations, and events throughout the year.",
+        "Students at Hull College enjoy a rich campus life with opportunities for involvement in various clubs, sports, and activities."
       ]
     },
     {
-      "tag": "joke",
+      "tag": "find_business_department",
       "patterns": [
-        "Tell me a joke",
-        "Make me laugh",
-        "Joke",
-        "A funny joke"
+        "Business department",
+        "Business",
+        "Business studies",
+        "Where is Business",
+        "Find Business"
       ],
       "responses": [
-        "Why don't scientists trust atoms? Because they make up everything!",
-        "I told my wife she was drawing her eyebrows too high. She looked surprised!"
+        "The Business Department is located on the second floor, near the east wing of the building.",
+        "You can find the Business Department by taking the elevator to the second floor and turning left."
       ]
     },
     {
-      "tag": "movie",
+      "tag": "find_computer_science_department",
       "patterns": [
-        "Recommend a movie",
-        "What movie should I watch",
-        "Movie suggestion",
-        "Good Movies",
-        "Film recommendation"
+        "Computer science department",
+        "Computer science",
+        "IT department",
+        "Where is Computer Science",
+        "Find Computer Science"
       ],
       "responses": [
-        "I recommend watching 'The Shawshank Redemption'.",
-        "How about 'Inception'? It's a great movie!"
+        "The Computer Science Department is located on the third floor, in the west wing of the building.",
+        "You can find the Computer Science Department by taking the stairs to the third floor and turning right."
       ]
     },
     {
-      "tag": "book",
+      "tag": "find_nursing_department",
       "patterns": [
-        "Recommend a book",
-        "What book should I read",
-        "Book suggestion",
-        "Good Books",
-        "Reading recommendation"
+        "Nursing department",
+        "Nursing",
+        "Medical studies",
+        "Where is Nursing",
+        "Find Nursing"
       ],
       "responses": [
-        "You might enjoy 'To Kill a Mockingbird' by Harper Lee.",
-        "I suggest reading 'The Great Gatsby' by F. Scott Fitzgerald."
+        "The Nursing Department is located on the first floor, near the main entrance.",
+        "You can find the Nursing Department by taking the stairs to the first floor and turning left."
+      ]
+    },
+    {
+      "tag": "find_psychology_department",
+      "patterns": [
+        "Psychology department",
+        "Psychology",
+        "Behavioral studies",
+        "Where is Psychology",
+        "Find Psychology"
+      ],
+      "responses": [
+        "The Psychology Department is located on the fourth floor, near the library.",
+        "You can find the Psychology Department by taking the elevator to the fourth floor and turning right."
+      ]
+    },
+    {
+      "tag": "find_education_department",
+      "patterns": [
+        "Education department",
+        "Education",
+        "Teaching studies",
+        "Where is Education",
+        "Find Education"
+      ],
+      "responses": [
+        "The Education Department is located on the third floor, near the west wing of the building.",
+        "You can find the Education Department by taking the stairs to the third floor and turning left."
       ]
     }
   ]

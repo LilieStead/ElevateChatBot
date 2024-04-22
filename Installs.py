@@ -78,7 +78,8 @@ if __name__ == "__main__":
         "flask",
         "flask-cors",
         "ipykernel",
-        "nltk"
+        "nltk",
+        "autocorrect"
     ]
     installPackages(packagesToInstall)
     nltkData()
