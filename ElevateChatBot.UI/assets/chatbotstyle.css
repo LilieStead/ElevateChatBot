@@ -301,4 +301,45 @@ input[disabled] {
         top: 1.3rem;
         left: 1.3rem;
     }
+
 }
+    /* animation for typing  */
+    .message .dot {
+        animation: mercuryTypingAnimation 1.8s infinite ease-in-out;
+        background: linear-gradient(120deg, #02C39A, #028090);
+        border-radius: 50%;
+        height: 0.8rem;
+        margin-right: 4px;
+        vertical-align: middle;
+        width: 0.8rem;
+        display: inline-block;
+    }
+    
+    .message-bot .dot:nth-child(1) {
+        animation-delay: 200ms;
+    }
+    
+    .message-bot .dot:nth-child(2) {
+        animation-delay: 300ms;
+    }
+    
+    .message-bot .dot:nth-child(3) {
+        animation-delay: 400ms;
+    }
+    
+    .message-bot .dot:last-child {
+        margin-right: 0;
+    }
+    
+    @keyframes mercuryTypingAnimation {
+        0% {
+            transform: translateY(0px);
+        }
+        28% {
+            transform: translateY(-7px);
+        }
+        44% {
+            transform: translateY(0px);
+        }
+    }
+    

@@ -3,7 +3,6 @@ function botmsgerror (){
     var currenttime = new Date().toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' });
     console.log(currenttime)
     chatBox.innerHTML += '<div class="message "><p> Im currently unavailable at the moment please try again later</p><span class="time">'+ currenttime +'</span></div>';
-    
 }
 
 function chatstatus(){
@@ -12,8 +11,7 @@ function chatstatus(){
     .then(response => {
         if (response.ok) {
             if (!checkCookie('chatcookie')) {
-                localStorage.removeItem("usermsgs");
-                localStorage.removeItem("botmsgs");
+                localStorage.removeItem("msgs");
                 createCookie('chatcookie', 'Chatcookie', 10);
             }
             else{

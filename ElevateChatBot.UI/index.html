@@ -10,9 +10,14 @@
     <h1>Elevate</h1>
 </header>
 <body>
-    <!-- code commented for now until js is done -->
-    <!-- <div id="chatbotJ"></div> -->
-    <div id="chatbotbuttonJ"></div>
+    <div id="message">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    
+    <div id="chatbotJ" class="disabled"></div>
+    <div id="chatbotbuttonJ" onclick="openchat()"></div>
 </body>
 <footer>
 
@@ -23,3 +28,5 @@
       $("#chatbotbuttonJ").load("assets/Jquery/chatbotJquerybutton.html");
     })
 </script>
+<script src="assets/js/openchat.js"></script>
+

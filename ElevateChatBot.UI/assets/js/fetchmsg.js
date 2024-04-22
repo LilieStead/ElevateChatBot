@@ -1,23 +1,37 @@
 function usermsg(msg) {
     var chatBox = document.getElementById('storemsg');
     var currenttime = new Date().toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' });
-    var userMsg = { message: msg, time: currenttime }; // Store message and time in an object
-    var userMsgs = JSON.parse(localStorage.getItem('usermsgs')) || [];
-    userMsgs.push(userMsg);
-    localStorage.setItem('usermsgs', JSON.stringify(userMsgs));
+    var Msg = { message: msg, time: currenttime, type: "message-personal" };
+    var Msgs = JSON.parse(localStorage.getItem('msgs')) || [];
+    Msgs.push(Msg);
+    localStorage.setItem('msgs', JSON.stringify(Msgs));
     // Update chatBox with the new message
     chatBox.innerHTML += '<div class="message message-personal"><p>' + msg + '</p> <span class="time">'+ currenttime +'</span></div>';
+
 }
 
 function botmsg(msg) {
     var chatBox = document.getElementById('storemsg');
     var currenttime = new Date().toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' });
-    var botMsg = { message: msg, time: currenttime }; // Store message and time in an object
-    var botMsgs = JSON.parse(localStorage.getItem('botmsgs')) || [];
-    botMsgs.push(botMsg);
-    localStorage.setItem('botmsgs', JSON.stringify(botMsgs))
+    var Msg = { message: msg, time: currenttime, type: "message-bot" };
+    var Msgs = JSON.parse(localStorage.getItem('msgs')) || [];
+    Msgs.push(Msg);
+    localStorage.setItem('msgs', JSON.stringify(Msgs));
     // Update chatBox with the new message
-    chatBox.innerHTML += '<div class="message"><p>' + msg + '</p><span class="time">'+ currenttime +'</span></div>';
+    chatBox.innerHTML += '<div class="message message-bot"><p>' + msg + '</p><span class="time">'+ currenttime +'</span></div>';
+}
+
+function typing(){
+    var chatBot = document.getElementById("storemsg");
+    chatBot.innerHTML += '<div class="message message-bot" id="typing" ><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>';
+}
+
+function removetyping(){
+    var typingmsg = document.getElementById("typing");
+    if (typingmsg) {
+        // Remove the div and all its child elements
+        typingmsg.parentNode.removeChild(typingmsg);
+    }
 }
 
 
@@ -27,7 +41,9 @@ function sendmsg(event){
     if (!message){ // Check if message is empty
         return;
     } else {
+        usermsg(message);
         try {
+            typing();
             fetch("http://127.0.0.1:5000/prediction", {
                 method: 'POST',
                 body: JSON.stringify({message}),
@@ -40,22 +56,25 @@ function sendmsg(event){
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
-                usermsg(message);
                 return response.json();
             })
             .then(data => {
                 // Handle response data here
                 console.log(data)
                 document.getElementById("question").value = "";
+                removetyping()
                 botmsg(data.answer);
             })
             .catch(error => {
                 console.error('Error sending message:', error);
+                removetyping()
                 botmsgerror ();
             });
         } catch (error) {
             console.error('Error sending message:', error);
+            removetyping()
             botmsgerror ();
+
         }
     }
 }

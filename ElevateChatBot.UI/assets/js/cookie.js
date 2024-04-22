@@ -24,20 +24,13 @@ function createCookie(chatcookie, cookieValue, minutesToExpire) {
     document.cookie = chatcookie + "=" + cookieValue + ";" + expires + ";path=/";
 }
 
-
-
 function loadmsgs() {
-    const loaduser = JSON.parse(localStorage.getItem("usermsgs")) || [];
-    const loadbot = JSON.parse(localStorage.getItem("botmsgs")) || [];
-
-    const loadmsgs = [];
-    for (let i = 0; i < Math.max(loaduser.length, loadbot.length); i++) {
-        if (loaduser[i]) loadmsgs.push({ message: loaduser[i].message, type: 'message message-personal', timestamp: loaduser[i].time });
-        if (loadbot[i]) loadmsgs.push({ message: loadbot[i].message, type: 'message', timestamp: loadbot[i].time });
-    }
-
-    const chatBox = document.getElementById('storemsg');
-    chatBox.innerHTML = loadmsgs.map(msg => {
-        return `<div class="${msg.type}"><p>${msg.message}</p><span class="time">${msg.timestamp}</span></div>`;
-    }).join("");
+    var Msgs = JSON.parse(localStorage.getItem('msgs')) || [];
+    var Chatbox = document.getElementById('storemsg');
+    Msgs.forEach(function(item){
+        var type = item.type; // Assuming 'type' is a property of each message item
+        var message = item.message; // Assuming 'message' is a property of each message item
+        var time = item.time; // Assuming 'time' is a property of each message item
+        Chatbox.innerHTML += '<div class="message '+ type +'"><p>' + message + '</p> <span class="time">'+ time +'</span></div>';
+    });
 }
