@@ -54,13 +54,18 @@
     src: url(fnt/LTSaeada-Regular.otf);
 }
 
+@font-face {
+    font-family: title;
+    src: url(fnt/AlteHaasGroteskRegular.ttf);
+}
+
 /* CHATBOT STYLES */
 #chatbotJ{
     position: fixed;
-    bottom: 2rem;
-    right: 0;
+    bottom: 1rem;
+    right: 1rem;
     height: 25rem;
-    margin-right: 5rem;
+    margin-right: 1rem;
     width: 18rem;
     z-index: 10;
     background-color: transparent; /* Make the background fully transparent */
@@ -251,6 +256,11 @@
     box-shadow: -17px -9px 20px rgba(0, 0, 0, 0.5);
     align-content: space-around;
     background-color: #05668D;
+    transition: 2.5s;
+}
+
+#chatbotbuttonJ .chatbutton:hover{
+    transition: 2.5s;
 }
 
 #chatbotbuttonJ .chatbutton .fa-comments{
@@ -321,3 +331,39 @@
       
 
 /* END BUTTON TO OPEN CHAT */
+
+
+header{
+    background-color: #05668D;
+    height: 5.5rem;
+}
+header h1{
+    font-family: title;
+    color: #fff;
+    font-size: 3rem;
+    margin-left: 3rem;
+}
+
+header h2{
+    font-family: title;
+    color: #ffffffbd;
+    font-size: 1.5rem;
+    margin-left: 5rem;
+    letter-spacing: 0.2rem;
+}
+
+#courses h1{
+    font-size: 1.1rem;
+    font-family: title;
+    text-align: center;
+}
+
+#courses div img{
+    height: 7rem;
+    width: 7rem;
+}
+
+#courses .flexcontainer {
+    flex-basis: calc(50% - 100px); /* Adjust the width based on your preference */
+    margin: 5px; /* Adjust the margin as needed */
+}

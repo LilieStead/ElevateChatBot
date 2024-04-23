@@ -34,6 +34,11 @@ function removetyping(){
     }
 }
 
+function scrollbottom(){
+    var chatBox = document.getElementById('chat');
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
 
 function sendmsg(event){
     event.preventDefault();
@@ -62,18 +67,23 @@ function sendmsg(event){
                 // Handle response data here
                 console.log(data)
                 document.getElementById("question").value = "";
-                removetyping()
+                
                 botmsg(data.answer);
             })
             .catch(error => {
                 console.error('Error sending message:', error);
-                removetyping()
                 botmsgerror ();
+            })
+            .finally(() => {
+                scrollbottom();
+                removetyping()
             });
+
         } catch (error) {
             console.error('Error sending message:', error);
-            removetyping()
+            removetyping();
             botmsgerror ();
+            scrollbottom();
 
         }
     }

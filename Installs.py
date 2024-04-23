@@ -51,20 +51,6 @@ def nltkData():
     nltk.download('punkt')
     nltk.download('stopwords')
 
-    # if not nltk.corpus.stopwords.words('english'):
-    #     print("Installing nltk stopwords...")
-    #     print(f"This may take a few minutes...")
-    #     nltk.download('stopwords')
-    # else:
-    #     print(f"NLTK stopwords are already installed.")
-    # if not nltk.tokenize.word_tokenize("test"):
-    #     print("Installing nltk punkt...")
-    #     print(f"This may take a few minutes...")
-    #     nltk.download('punkt')
-    # else:
-    #     print(f"nltk punkt is already installed.")
-    # print("nltk data check completed.")
-
 if __name__ == "__main__":
     # Update pip if necessary
     if not pipUpToDate():
@@ -79,7 +65,8 @@ if __name__ == "__main__":
         "flask-cors",
         "ipykernel",
         "nltk",
-        "autocorrect"
+        "autocorrect",
+        "tk"
     ]
     installPackages(packagesToInstall)
     nltkData()

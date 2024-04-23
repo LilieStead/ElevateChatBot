@@ -13,6 +13,7 @@ function openchat(){
     open.classList.remove('disabled');
     close.classList.add('disabled');
     void open.offsetWidth;
+    scrollbottom();
 }
 
 

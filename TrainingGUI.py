@@ -1,5 +1,3 @@
-# gui_app.py
-
 import tkinter as tk
 from tkinter import scrolledtext
 import subprocess
