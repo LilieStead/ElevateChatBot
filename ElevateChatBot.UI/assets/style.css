@@ -351,18 +351,68 @@ header h2{
     margin-left: 5rem;
     letter-spacing: 0.2rem;
 }
+#courses {
+    background-color: #fff;
+}
 
-#courses h1{
+
+#courses .coursesheading h1{
     font-size: 1.1rem;
     font-family: title;
     text-align: center;
+    color: #ddd;
+    justify-content: space-around;
+    width: 68%;
 }
 
-#courses div img{
-    height: 7rem;
-    width: 7rem;
+#courses .coursesheading{
+    background-color: #2C2F33;
+    width: 100%;
+    padding: 0.5rem 0;
 }
 
+#courses div div .item img{
+    height: 10rem;
+    width: 10rem;
+    /* align-self: center; */
+    
+}
+#courses div div{
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+#courses .top{
+    margin-top: 1rem;
+}
+
+
+
+#courses div div .item p{
+    font-family: title;
+    font-size: 1.5rem;
+    text-align: center;
+}
+#courses div div .item{
+    text-align: center;
+    width: 25%;
+    margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width:620px) {
+    #courses div div .item{
+        width: 35%;
+    }
+    @media screen and (max-width:460px) {
+        #courses div div .item{
+            width: 100%;
+        } 
+    }
+}
+#courses div div{
+    width: 100vw;
+}
 #courses .flexcontainer {
     flex-basis: calc(50% - 100px); /* Adjust the width based on your preference */
     margin: 5px; /* Adjust the margin as needed */
