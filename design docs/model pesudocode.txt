@@ -1,0 +1,22 @@
+//model pesudocode
+
+import torch
+import toruch.nn as nn
+
+Class Network (nn.Module
+	Function init (self, inputSize, hiddenSize, outputSize)
+		Super Constructor(Network, self)
+		layer1 = Linear(inputSize, hiddenSize)
+		relu = ReLU()
+		layer2 = Linear(hiddenSize, hiddenSize)
+		layer3 = Linear(hiddenSize, outputSize)
+
+	Function forward (self, x)
+		out = layer1.forward(x)
+		out = relu.forward(out)        
+		out = layer2.forward(out)      
+		out = relu.forward(out)        
+		out = layer3.forward(out) 
+
+		Return out
+		
