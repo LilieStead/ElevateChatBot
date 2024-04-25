@@ -101,6 +101,7 @@ def getResponse(msg):
 
     prob = torch.softmax(output, dim=1)
     prob = prob[0][predicted.item()]
+    print(f"Probability: {prob.item() * 100:.2f}%")
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:

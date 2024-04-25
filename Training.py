@@ -63,7 +63,7 @@ outputSize = len(tags)
 inputSize = len(x_train[0])
 batchSize = 8
 learningRate = 0.001
-numberEpochs = 1500
+numberEpochs = 1000
 
 # Create DataLoader
 dataset = ChatbotDataset()
