@@ -16,7 +16,7 @@ class Network(nn.Module):
         out = self.l1(x)
         out = self.relu(out)  # Correct way to apply ReLU activation
         out = self.l2(out)
-        out = self.relu(out)  # Correct way to apply ReLU activation
+        out = self.relu(out)
         out = self.l3(out)
 
         return out
