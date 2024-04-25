@@ -1,0 +1,103 @@
+import subprocess
+import torch
+import torch.nn as nn
+from torch.utils.data import Dataset, DataLoader
+import json
+from textProcessing import wordBag, tokenize, stemming
+from model import Network
+
+run (installs.py)
+
+try
+	open (intents.json as read) as f
+		intnets = f
+except filenotfould error
+	TO DISPLAY Error: 'intents.json' could not be found. Please place the file in the project directory.
+	EXIT
+
+allWords = BLANK ARRAY
+tags = BLANK ARRAY
+xy = BLANK ARRAY
+
+for intent in intnets
+	tag = intnet['tag']
+	tags.append(tag)
+	for pattern in intent
+		sentenceWords = tokenize(pattern)
+		allWords.extend(sentenceWords)
+        	xy.append((sentenceWords, tag))
+
+allWords = stemming(word) for word in allwords if word is not ['?', '.', '!', '+', '-']
+allwords = sorted(set(allWords))
+tags = sorted(set(tags))
+
+x_train = BLANK ARRAY
+y_train = BLANK ARRAY
+
+
+for sentenceWords, tag in xy
+	bag = wordBag(sentenceWords, allWords)
+	x_train.append(bag)
+    	label = tags.index(tag)
+   	y_train.append(label)
+
+Class ChatbotDataset (Dataset)
+	function init (self)
+		self.n_samples = len(x_train)
+		self.n_samples = len(x_train, datatype = float32)
+		self.y_data = torch.tensor(y_train, datatype = long)
+	function getitem (self, index)
+		return self.x_data[index], self.y_data[index]
+	function len (self)
+		return self.n_samples
+
+hiddenSize = 8 
+OutputSize = len(tags)
+inputSize = len(x_train)
+batchsize = 8
+learningRate = 0.001
+numberEpocs = 1000
+
+dataset = chatbotDataset()
+trainLoader = DataLoader(dataset=dataset, batch_size=batchSize, shuffle=True)
+device = torch.device(if cuda else CPU)
+model = Network(inputSize, hiddenSize, outputSize) TO device
+
+criterion = nn.CrossEntropyLoss()
+optimizer = torch.optim.Adam(model.parameters(), learingRate=learningRate)
+
+TO DISPLAY Training program is running
+
+for epoch in ranage numberEpochs
+	for words, lables in trianLoader
+		words = words TO device
+		labels = lables to device
+		outputs = model(words)
+		loss = criterion(outputs, labels)
+		optimizer.zero_grad()
+        	loss.backward()
+        	optimizer.step()
+	if (epoch + 1) % 100 == 0
+
+	TO DISPLAY Epoch {epoch + 1}/{numberEpochs} Loss: [loss]
+TO DISPLAY Final loss: [loss]
+
+data = {
+
+	model_state: model.state_dict(),
+    	input_size: inputSize,
+    	output_size: outputSize,
+    	hidden_size: hiddenSize,
+    	all_words: allWords,
+    	tags: tags,
+}
+
+try 
+	FILE = DATA.pth
+	SAVE data TO FILE
+	TO DISPLAY Training complete, model saved to [FILE]
+except file saving error
+	TO DISPLAY Error: An I/O error occurred while saving the model.
+except erorr as e
+	TO DISPLAY Error: [e]
+	
