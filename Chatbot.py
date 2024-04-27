@@ -63,7 +63,7 @@ Network = loadModelmModule()
 file = "data.pth"
 data = torch.load(file)
 inputSize = data["input_size"]
-hiddenSize = data["hidden_size"]  # Correct the case of the key
+hiddenSize = data["hidden_size"]
 outputSize = data["output_size"]
 allWords = data["all_words"]
 tags = data["tags"]
@@ -71,7 +71,6 @@ modelState = data["model_state"]
 module = Network(inputSize, hiddenSize, outputSize).to(device)
 module.load_state_dict(modelState)
 module.eval()
-
 name = "Elevate"
 print(f"*********{name} Chatbot has successfully deployed*********")
 
@@ -87,9 +86,9 @@ def spellCheck(sentence):
 
 
 def getResponse(msg):
-    sentence = spellCheck(msg)
+    usersentence = spellCheck(msg)
     # Tokenize the sentence again to word bag
-    sentence = tokenizeFunction(sentence)
+    sentence = tokenizeFunction(usersentence)
     x = wordBagFunction(sentence, allWords)
     x = x.reshape(1, x.shape[0])
     x = torch.from_numpy(x)
@@ -106,9 +105,12 @@ def getResponse(msg):
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 return random.choice(intent['responses'])
-                print(f"{tag} & {intent}")
     else:
+        with open("userquestions.txt", 'a+') as questionsFile:
+            questionsFile.write(f"User: {usersentence}\nProbability: {prob.item() * 100:.2f}%\nTag: {tag}\n")
+            questionsFile.close()
         return random.choice(fallbackResponses)
+
 
 
 
