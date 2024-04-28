@@ -118,9 +118,6 @@ if __name__ == "__main__":
     print(f"Ready to chat!")
     while True:
         sentence = input("You: ")
-        if sentence.lower() == "quit":
-            print("Exiting...")
-            break
         bot_response = getResponse(sentence)
         print("Bot:", bot_response)
 
