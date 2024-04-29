@@ -1,0 +1,33 @@
+FROM flask IMPORT Flask, render_template, request, jsonify
+FROM flask_cors IMPORT CORS
+FROM Chatbot IMPORT getResponse
+
+app = flask(name)
+CORS(app)
+
+
+APP ROUTE('/status')
+function serverstatus
+	RETURN server is running
+
+APP ROUTE('/prediction', methods=POST, OPTIONS)
+function prediction
+	IF request method == OPTIONS
+		response = jsonify (message": "CORS Preflight Request Handled)
+		responce.headers.add 'Access-Control-Allow-Origin, *)
+		responce.headers.add (Access-Control-Allow-Headers, 'Content-Type,Authorization)
+		response.headers.add (Access-Control-Allow-Methods, POST
+		RETURN response
+	data = request.get_json 
+	IF NOT data OR message NO IN data OR NOT data[message].strip
+		RETURN error: Message is blank
+	IF length(data[message)] > 200
+		RETURN error: Message is too long
+	text = request.get_json.get(message)
+	IF NOT text
+		RETURN error: Message is blank
+	resource = getResponse(text)
+	message = answer: {resource}
+	RETURN message
+	IF idiom 
+		app run (debug = FALSE)

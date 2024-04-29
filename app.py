@@ -7,7 +7,7 @@ CORS(app)
 
 # Method to see if server is available
 @app.route('/status')
-def server_status():
+def serverstatus():
     return 'Server is running'
 
 @app.route('/prediction', methods=["POST", "OPTIONS"])

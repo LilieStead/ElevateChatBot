@@ -1,0 +1,90 @@
+IMPORT subprocess
+
+RUN (installs.py) 
+
+function textProcessingModule
+	TRY
+		IMPORT textProcessing
+		RETURN wordBag, tokenize, stemming
+	ECXEPT filenotfould error
+		TO DISPLAY Error: 'textProcessing.py' could not be found. Please place the file in the project directory
+		EXIT
+
+function loadModelmModule
+	TRY 
+		IMPORT Network
+	ECXEPT filenotfould error
+		TO DISPLAY Error: 'model.py' could not be found. Please place the file in the project directory.
+		EXIT
+
+IMPORT random
+IMPORT torch
+IMPORT torch.nn AS nn
+from torch.utils.data IMPORT DatASet, DataLoader
+IMPORT json
+IMPORT torch.cuda
+from autocorrect IMPORT Speller
+
+
+device = torch.device(IF cuda ELSE CPU)
+ TRY
+	OPEN (intents.json AS read) AS f
+		intents = f
+except filenotfould error
+	TO DISPLAY Error: 'intents.json' could not be found. Please place the file in the project directory
+	EXIT
+
+fallbackResponses = [LIST OF FALL BACK RESPONCES]
+
+wordBagFunction, tokenizeFunction, stemmingFunction = textProcessingModule()
+Network = loadModelmModule()
+file = data.pth
+data = torch.load(file)
+inputSize = data[input_size]
+hiddenSize = data["hidden_size"]
+outputSize = data["output_size"]
+allWords = data["all_words"]
+tags = data["tags"]
+modelState = data["model_state"]
+module = Network(inputSize, hiddenSize, outputSize) TO device
+module load_state_dict(modelState)
+module.eval()
+name = Elevate
+TO DISPLAY *********{name} Chatbot has successfully deployed*********
+spellChecker = Speller()
+
+function spellChecker (sentence)
+	Tokens = tokenizeFunction(sentence)
+	corrected = token for token in tokens
+	RETURN "".join(corrected)
+
+function getResponse (msg)
+	usersenetence = spellCheck(msg)
+	sentence = tokenizeFunction(usersenetence)
+	x = wordBagFunction(sentence, allWords)
+    	x = x.reshape(1, x.shape[0])
+    	x = torch.from_numpy(x)
+	output = module (x)
+	- predicted = torch.max(output, dimension=1)
+	tag = tags[predicted()]
+	prob = torch.softmax(output, dimension=1)
+	prob = prob[0][predicted]
+	TO DISPLAY Probability: {prob.item() * 100}
+	IF prob > 0.75
+		FOR intent IN intents['intents']
+			IF tag == intents['intents']
+				RETURN random intent["responses"]
+	ELSE
+		OPEN userquestions.txt AS questionsFile
+		
+			questionsFile WRITE User: {usersentence} Probability: {prob.item() * 100:.2f}% Tag: {tag}
+			questionsFile CLOSE
+			RETURN random(fallbackResponses)
+
+IF idiom
+	TO DISPLAY Ready to chat!
+		WHILE TRUE
+			senetence = FROM KEYBOARD (you:)
+			botResponce = getResponce(sentence)
+			TO DISPLAY(Bot: {botResponse})
+			

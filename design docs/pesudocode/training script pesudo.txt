@@ -1,18 +1,18 @@
-import subprocess
-import torch
-import torch.nn as nn
-from torch.utils.data import Dataset, DataLoader
-import json
-from textProcessing import wordBag, tokenize, stemming
-from model import Network
+IMPORT subprocess
+IMPORT torch
+IMPORT torch.nn AS nn
+from torch.utils.data IMPORT DatASet, DataLoader
+IMPORT json
+from textProcessing IMPORT wordBag, tokenize, stemming
+from model IMPORT Network
 
-run (installs.py)
+RUN (installs.py)
 
-try
-	open (intents.json as read) as f
+TRY
+	open (intents.json AS read) AS f
 		intnets = f
 except filenotfould error
-	TO DISPLAY Error: 'intents.json' could not be found. Please place the file in the project directory.
+	TO DISPLAY Error: 'intents.json' could not be found. PleASe place the file in the project directory.
 	EXIT
 
 allWords = BLANK ARRAY
@@ -27,13 +27,12 @@ for intent in intnets
 		allWords.extend(sentenceWords)
         	xy.append((sentenceWords, tag))
 
-allWords = stemming(word) for word in allwords if word is not ['?', '.', '!', '+', '-']
+allWords = stemming(word) for word in allwords IF word is not ['?', '.', '!', '+', '-']
 allwords = sorted(set(allWords))
 tags = sorted(set(tags))
 
 x_train = BLANK ARRAY
 y_train = BLANK ARRAY
-
 
 for sentenceWords, tag in xy
 	bag = wordBag(sentenceWords, allWords)
@@ -41,16 +40,15 @@ for sentenceWords, tag in xy
     	label = tags.index(tag)
    	y_train.append(label)
 
-Class ChatbotDataset (Dataset)
+ClASs ChatbotDatASet (DataSet)
 	function init (self)
 		self.n_samples = len(x_train)
 		self.n_samples = len(x_train, datatype = float32)
 		self.y_data = torch.tensor(y_train, datatype = long)
 	function getitem (self, index)
-		return self.x_data[index], self.y_data[index]
+		RETURN self.x_data[index], self.y_data[index]
 	function len (self)
-		return self.n_samples
-
+		RETURN self.n_samples
 hiddenSize = 8 
 OutputSize = len(tags)
 inputSize = len(x_train)
@@ -58,9 +56,9 @@ batchsize = 8
 learningRate = 0.001
 numberEpocs = 1000
 
-dataset = chatbotDataset()
-trainLoader = DataLoader(dataset=dataset, batch_size=batchSize, shuffle=True)
-device = torch.device(if cuda else CPU)
+dataSet = chatbotDataSet()
+trainLoader = DataLoader(datASet=datASet, batch_size=batchSize, shuffle=True)
+device = torch.device(IF cuda ELSE CPU)
 model = Network(inputSize, hiddenSize, outputSize) TO device
 
 criterion = nn.CrossEntropyLoss()
@@ -77,7 +75,7 @@ for epoch in ranage numberEpochs
 		optimizer.zero_grad()
         	loss.backward()
         	optimizer.step()
-	if (epoch + 1) % 100 == 0
+	IF (epoch + 1) % 100 == 0
 
 	TO DISPLAY Epoch {epoch + 1}/{numberEpochs} Loss: [loss]
 TO DISPLAY Final loss: [loss]
@@ -92,12 +90,12 @@ data = {
     	tags: tags,
 }
 
-try 
+TRY 
 	FILE = DATA.pth
 	SAVE data TO FILE
 	TO DISPLAY Training complete, model saved to [FILE]
 except file saving error
 	TO DISPLAY Error: An I/O error occurred while saving the model.
-except erorr as e
+except erorr AS e
 	TO DISPLAY Error: [e]
 	

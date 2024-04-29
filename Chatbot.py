@@ -118,8 +118,8 @@ if __name__ == "__main__":
     print(f"Ready to chat!")
     while True:
         sentence = input("You: ")
-        bot_response = getResponse(sentence)
-        print("Bot:", bot_response)
+        botResponse = getResponse(sentence)
+        print("Bot:", botResponse)
 
 
 

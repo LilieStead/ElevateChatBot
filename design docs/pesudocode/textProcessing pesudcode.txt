@@ -1,18 +1,18 @@
-import nlkt
-import numpy as np 
-from nltk.stem.porter import PorterStemmer
+IMPORT nlkt
+IMPORT numpy AS np 
+FROM nltk.stem.porter IMPORT PorterStemmer
 
 stemmer = PorterStemmer()
 
 function tokenize(sentence)
-	return senetents.nltk.word_tokenize
+	RETURN senetents.nltk.word_tokenize
 function stemming(word)
-	return stemmer.word.lowercase.stem
+	RETURN stemmer.word.lowercase.stem
 
 function wordBag(tokenizeSentence, allWords)
 	tokenizeWords = stemming(word) for word in tokenizeSentence
 	bag = numpy.zeros(length of allwords, data type= float32)
 	for idx and word in allwords
-		if word in tokenizeWords
+		IF word in tokenizeWords
 			bag[idx] = 1.0
-	return bag
+	RETURN bag

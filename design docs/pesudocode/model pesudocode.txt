@@ -1,9 +1,7 @@
-//model pesudocode
+IMPORT torch
+IMPORT toruch.nn AS nn
 
-import torch
-import toruch.nn as nn
-
-Class Network (nn.Module
+ClASS Network (nn.Module
 	Function init (self, inputSize, hiddenSize, outputSize)
 		Super Constructor(Network, self)
 		layer1 = Linear(inputSize, hiddenSize)
@@ -18,5 +16,5 @@ Class Network (nn.Module
 		out = relu.forward(out)        
 		out = layer3.forward(out) 
 
-		Return out
+		RETURN out
 		
