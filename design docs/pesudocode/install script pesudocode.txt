@@ -1,0 +1,45 @@
+IMPORT subprocess
+IMPORT sys
+IMPORT pip
+
+
+
+function pipLookUp(package)
+	TRY
+		subprocess.chexk_output(sys.executable, -m, pip, show, {package})
+		RETURN TRUE
+	EXCEPT subprocess.CalledProcessError:
+		RETURN FALSE
+
+
+function installPackages(packageList)
+	FOR package IN packageList
+		IF NO pipLookUp
+			TO DISPLAY Installing {package}
+			TO DISPLAY This may take a few minutes...
+		ELSE
+			TO DISPLAY {package} is already installed.
+
+function ugradePip
+	TO DISPLAY Upgrading pip...
+	subprocess.chexk_output(sys.executable, -m, pip, show, pip)
+
+function nltkData 
+	IMPORT nltk
+	nltk DOWNLOAD (punkt)
+	nltk DOWNLOAD (stopwords)
+
+IF idiom
+	upgradePip()
+	packagesToInstall = [
+	      torch,
+        	tensorflow,
+        	flask,
+        	flask-cors,
+        	ipykernel,
+        	nltk,
+        	autocorrect,
+        	tk
+	installPackages(packagesToInstall)
+	nltkData()
+	TO DISPLAY 
