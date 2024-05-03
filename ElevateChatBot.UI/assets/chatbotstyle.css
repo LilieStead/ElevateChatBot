@@ -163,15 +163,16 @@ body{
     padding: 1.5rem;
     
 }
-#inputspace form input[type="submit"]{
+#inputspace form #sendbtn{
     border-radius:33px;
     background-color: #028090;
     border: none;
-    width: 8rem;
-    height: 2rem;
+    width: 10rem;
+    height: 3rem;
     font-family: fontl;
     color: #fff;
     margin-top: 1rem;
+    font-size: 1.3rem;
 }
 
 .messages{

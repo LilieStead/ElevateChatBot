@@ -13,6 +13,8 @@ function chatstatus(){
             if (!checkCookie('chatcookie')) {
                 localStorage.removeItem("msgs");
                 createCookie('chatcookie', 'Chatcookie', 10);
+                var wellcomemsg = "Hello there! 👋 Welcome to our chatbot. I'm here to assist you with any questions or tasks you have. Whether you're seeking information, advice, or just a friendly conversation, feel free to ask away. Let's get started!";
+                botmsg(wellcomemsg);
             }
             else{
                 loadmsgs()

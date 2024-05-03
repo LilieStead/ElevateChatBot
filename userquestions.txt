@@ -1,3 +1,18 @@
 User: hsjadas
 Probability: 38.10%
 Tag: find_computer_science_department
+User: where can i find nursing
+Probability: 59.93%
+Tag: find_nursing_department
+User: where can i find nursing ?
+Probability: 59.93%
+Tag: find_nursing_department
+User: where is pycologey
+Probability: 47.15%
+Tag: find_computer_science_department
+User: ree
+Probability: 52.55%
+Tag: greeting
+User: heyeyyeyeye
+Probability: 52.55%
+Tag: greeting
