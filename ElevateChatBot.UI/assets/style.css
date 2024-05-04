@@ -60,6 +60,45 @@
 }
 
 /* CHATBOT STYLES */
+
+
+@media screen and (max-width: 430px) {
+    #chatbotJ{
+        margin-right: 0.25rem !important;
+        margin-bottom: 3rem !important;
+        width: 15rem !important;
+
+
+    }
+    #chatbotJ #chatbotheader .chaticon{
+        left: -2rem !important;
+        width: 5.2rem !important;
+        height: 5.2rem !important;
+
+    }
+    #chatbotheader{
+        height: 20% !important;
+    }
+    #chat{
+        height: 65%;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    #chatbotJ #chatbotheader .chaticon{
+        display: none;
+    }
+    #chatbotJ #chatbotheader h1{
+        padding-left: 0.8rem !important;
+    }
+    #chatbotJ #chatbotheader h2{
+        padding-left: 1.2rem !important;  
+    }
+    #chatbotJ{
+        box-shadow: none !important;
+    }
+}
+
 #chatbotJ{
     position: fixed;
     bottom: 1rem;
@@ -412,10 +451,19 @@ header h2{
     #courses div div .item{
         width: 35%;
     }
+    header h2{
+        font-size: 1.1rem;
+    }
+    header{
+        height: 7.5rem;
+    }
     @media screen and (max-width:460px) {
         #courses div div .item{
             width: 100%;
-        } 
+        }
+        header h2{
+            font-size: 0.9rem;
+        }
     }
 }
 #courses div div{
