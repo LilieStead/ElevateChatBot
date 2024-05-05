@@ -1,10 +1,13 @@
 function usermsg(msg) {
     var chatBox = document.getElementById('storemsg');
-    var currenttime = new Date().toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' });
-    var Msg = { message: msg, time: currenttime, type: "message-personal" };
-    var Msgs = JSON.parse(localStorage.getItem('msgs')) || [];
-    Msgs.push(Msg);
-    localStorage.setItem('msgs', JSON.stringify(Msgs));
+    var cookiename = "consentCookie";
+    if (cookieExists(cookiename)) {
+        var currenttime = new Date().toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' });
+        var Msg = { message: msg, time: currenttime, type: "message-personal" };
+        var Msgs = JSON.parse(localStorage.getItem('msgs')) || [];
+        Msgs.push(Msg);
+        localStorage.setItem('msgs', JSON.stringify(Msgs));
+    }
     // Update chatBox with the new message
     chatBox.innerHTML += '<div class="message message-personal"><p>' + msg + '</p> <span class="time">'+ currenttime +'</span></div>';
 
@@ -12,11 +15,14 @@ function usermsg(msg) {
 
 function botmsg(msg) {
     var chatBox = document.getElementById('storemsg');
-    var currenttime = new Date().toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' });
-    var Msg = { message: msg, time: currenttime, type: "message-bot" };
-    var Msgs = JSON.parse(localStorage.getItem('msgs')) || [];
-    Msgs.push(Msg);
-    localStorage.setItem('msgs', JSON.stringify(Msgs));
+    var cookiename = "consentCookie";
+    if (cookieExists(cookiename)) {
+        var currenttime = new Date().toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit' });
+        var Msg = { message: msg, time: currenttime, type: "message-bot" };
+        var Msgs = JSON.parse(localStorage.getItem('msgs')) || [];
+        Msgs.push(Msg);
+        localStorage.setItem('msgs', JSON.stringify(Msgs));
+    }
     // Update chatBox with the new message
     chatBox.innerHTML += '<div class="message message-bot"><p>' + msg + '</p><span class="time">'+ currenttime +'</span></div>';
 }

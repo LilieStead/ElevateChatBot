@@ -98,6 +98,7 @@
 
 #chatheader #options .fa-home{
     font-size: 3rem;
+    color: #fff;
 }
 
 #chatheader .chaticon{
@@ -356,3 +357,53 @@ input[disabled] {
         }
     }
     
+
+
+    /* cookie popup */
+
+
+.popup {
+    display: none; 
+    /* change to flex once js for cookies pop is done */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index:999;
+    justify-content: center;
+    align-items: center;
+    font-family: chatfontr;
+    overflow:hidden;
+    }
+    
+    .popup-content{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+    font-family: chatfontr;
+    font-size: calc(0.8rem + 0.9vw);
+    width: 80vw;
+    }
+    
+    #cookietitle{
+    font-size: calc(1rem + 0.9vw);
+    }
+    
+    #close-popup{
+    display: block;
+    margin: 15px auto;
+    padding: 10px 20px;
+    background-color: #05668D;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: calc(1rem + 0.9vw);
+    font-family: chatfontr;
+    color: white;
+    }
+    
+
+/* cookie pop */

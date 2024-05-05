@@ -10,11 +10,15 @@ function chatstatus(){
     fetch("http://127.0.0.1:5000/status")
     .then(response => {
         if (response.ok) {
-            if (!checkCookie('chatcookie')) {
+            var wellcomemsg = "Hello there! 👋 Welcome to our chatbot. I'm here to assist you with any questions or tasks you have. Whether you're seeking information, advice, or just a friendly conversation, feel free to ask away. Let's get started!";
+            if (!cookieExists){
+                // error handling if the user by passes cookie popup 
+                botmsg(wellcomemsg);
+            }
+            else if (!checkCookie('chatcookie')) {
                 localStorage.removeItem("msgs");
                 createCookie('chatcookie', 'Chatcookie', 10);
-                var wellcomemsg = "Hello there! 👋 Welcome to our chatbot. I'm here to assist you with any questions or tasks you have. Whether you're seeking information, advice, or just a friendly conversation, feel free to ask away. Let's get started!";
-                botmsg(wellcomemsg);
+                botmsg(wellcomemsg)
             }
             else{
                 loadmsgs()
@@ -35,5 +39,3 @@ function chatstatus(){
         sendbtn.disabled = true;
     });
 }
-
-window.onload = chatstatus();
