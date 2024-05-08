@@ -82,6 +82,7 @@ def spellCheck(sentence):
     # Spell check and replace each token
     corrected = [spellChecker(token) for token in tokens]
     # Join the corrected tokens back into a sentence
+    print (corrected) # for demo
     return " ".join(corrected)
 
 

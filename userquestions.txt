@@ -16,3 +16,6 @@ Tag: greeting
 User: heyeyyeyeye
 Probability: 52.55%
 Tag: greeting
+User: does hull offer any grants ?
+Probability: 49.50%
+Tag: programs
