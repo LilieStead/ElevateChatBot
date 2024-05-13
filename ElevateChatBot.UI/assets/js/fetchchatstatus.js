@@ -10,7 +10,7 @@ function chatstatus(){
     fetch("http://127.0.0.1:5000/status")
     .then(response => {
         if (response.ok) {
-            var wellcomemsg = "Hello there! 👋 Welcome to our chatbot. I'm here to assist you with any questions or tasks you have. Whether you're seeking information, advice, or just a friendly conversation, feel free to ask away. Let's get started!";
+            var wellcomemsg = "Welcome to our chatbot! 🤖 Got questions? Don't hesitate to ask! We're here to help. Just a heads up: we save unresolved questions to learn and improve, but we don't collect personal data. Your privacy matters to us! So, fire away with your queries, and let's learn together!";
             if (!cookieExists){
                 // error handling if the user by passes cookie popup 
                 botmsg(wellcomemsg);

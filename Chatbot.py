@@ -101,12 +101,15 @@ def getResponse(msg):
 
     prob = torch.softmax(output, dim=1)
     prob = prob[0][predicted.item()]
+    print(f"Tag: {tag}")
     print(f"Probability: {prob.item() * 100:.2f}%")
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
                 return random.choice(intent['responses'])
+
     else:
+        print ("FALLBACK")
         with open("userquestions.txt", 'a+') as questionsFile:
             questionsFile.write(f"User: {usersentence}\nProbability: {prob.item() * 100:.2f}%\nTag: {tag}\n")
             questionsFile.close()
@@ -121,6 +124,9 @@ if __name__ == "__main__":
         sentence = input("You: ")
         botResponse = getResponse(sentence)
         print("Bot:", botResponse)
+        print(f"********************************************CHAT********************************************")
+
+
 
 
 

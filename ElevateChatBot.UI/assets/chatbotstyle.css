@@ -378,6 +378,17 @@ input[disabled] {
     overflow:hidden;
     }
     
+.popup-content{
+background-color: #fff;
+padding: 20px;
+border-radius: 5px;
+text-align: left;
+font-family: chatfontr;
+font-size: calc(0.8rem + 0.9vw);
+width: 50vw;
+}
+
+@media screen and (max-width: 830px) {
     .popup-content{
     background-color: #fff;
     padding: 20px;
@@ -387,23 +398,24 @@ input[disabled] {
     font-size: calc(0.8rem + 0.9vw);
     width: 70vw;
     }
-    
-    #cookietitle{
-    font-size: calc(1rem + 0.9vw);
-    }
-    
-    #close-popup{
-    display: block;
-    margin: 15px auto;
-    padding: 10px 20px;
-    background-color: #05668D;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: calc(1rem + 0.9vw);
-    font-family: chatfontr;
-    color: white;
-    }
-    
+}
+
+#cookietitle{
+font-size: calc(1rem + 0.9vw);
+}
+
+#close-popup{
+display: block;
+margin: 15px auto;
+padding: 10px 20px;
+background-color: #05668D;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: calc(1rem + 0.9vw);
+font-family: chatfontr;
+color: white;
+}
+
 
 /* cookie pop */
